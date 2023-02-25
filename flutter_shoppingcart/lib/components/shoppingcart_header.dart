@@ -30,9 +30,12 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
   Widget _buildHeaderPic() {
     return Padding(
       padding: const EdgeInsets.all(16.0),
-      child: AspectRatio(
-        aspectRatio: 5 / 3,
-        child: Image.asset(selectedPic[selectedId]),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: AspectRatio(
+          aspectRatio: 5 / 3,
+          child: Image.asset(selectedPic[selectedId]),
+        ),
       ),
     );
   }

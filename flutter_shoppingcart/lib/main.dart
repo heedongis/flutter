@@ -25,7 +25,10 @@ class ShopingCartPage extends StatelessWidget {
     return Scaffold(
         appBar: _buildShoppingCartAppbar(),
         body: Column(
-          children: [ShoppingCartHeader(), ShoppingCartDetail()],
+          children: [
+            ShoppingCartHeader(),
+            Expanded(child: ShoppingCartDetail())
+          ],
         ));
   }
 
